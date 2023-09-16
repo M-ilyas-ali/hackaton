@@ -15,7 +15,7 @@ export default async function AllProducts() {
             key={items._id}
             className=" bg-gray-200 rounded-xl hover:scale-105 duration-300 text-center space-y-2"
           >
-            <Link href={`/allproducts/${items.slug.current}`}>
+            <Link href={`/${items.slug.current}`}>
               <p className="text-xl text-black text-muted-foreground mt-2 self-center">
                 {items.title}
               </p>

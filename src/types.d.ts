@@ -5,7 +5,6 @@ export interface Data_Type {
     name:string;
     title: string;
     image: IImage;
-    className?: string;
     description: string;
     category: {
       name: string;
