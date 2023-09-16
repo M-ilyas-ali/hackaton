@@ -13,8 +13,8 @@ export default function Navbar() {
       <Wrapper>
         <div className=" pt-8 pb-8">
           <div className=" hidden lg:flex  font-bold border-gray-500 border-[1px] rounded-lg items-center justify-around h-12">
-            <Link href="#">
-              <Image src={logo} alt="logo" className=" animate-bounce" />
+            <Link href="/">
+              <Image src={logo} alt="logo" className=" animate-bounce"/>
             </Link>
             <ul className="flex w-[30%] justify-between">
               <li className="hover:scale-125 duration-300 hover:text-slate-800 ">
@@ -27,7 +27,7 @@ export default function Navbar() {
                 <Link href="#">Children</Link>
               </li>
               <li className="hover:scale-125 duration-300 hover:text-slate-800 ">
-                <Link href="#">All-Products</Link>
+                <Link href="/allproducts">All-Products</Link>
               </li>
             </ul>
             <div className="w-[30%] p-1 flex justify-start items-center border-2 rounded-md border-gray-200 gap-1">
@@ -50,7 +50,7 @@ export default function Navbar() {
         <div className=" pt-8 pb-8">
           <div className=" lg:hidden  font-bold border-gray-500 border-[1px] rounded-lg h-12">
             <Link
-              href="#"
+              href="/"
               className="flex justify-between items-center mt-2 mx-4"
             >
               <Image src={logo} alt="logo" className=" animate-bounce" />
@@ -82,7 +82,7 @@ export default function Navbar() {
                   <Link href="#">Children</Link>
                 </li>
                 <li className="hover:scale-125 duration-300 hover:text-amber-500 ">
-                  <Link href="#">All-Products</Link>
+                  <Link href="/allproducts">All-Products</Link>
                 </li>
               </ul>
             </div>

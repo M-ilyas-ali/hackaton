@@ -5,7 +5,7 @@ import Intro from "@/components/Intro";
 import Navbar from "@/components/Navbar";
 import Product_Slug from "@/components/Product_Card";
 import Swiper_Slider from "@/components/Swiper_Slider";
-import Product_Description from "@/components/components_parts/Product_Description";
+
 
 export default function Home() {
   return (
