@@ -1,4 +1,4 @@
-import * as React from "react";
+import  React from "react";
 import Image from "next/image";
 import picture from "/public/img1.webp";
 import co1 from "/public/Featured1.webp";

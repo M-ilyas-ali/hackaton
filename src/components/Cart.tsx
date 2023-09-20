@@ -1,3 +1,4 @@
+import React from "react";
 import Image from "next/image";
 import Wrapper from "./Wrapper";
 import { AiFillDelete } from "react-icons/ai";
