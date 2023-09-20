@@ -3,7 +3,7 @@ import { Image as IImage } from "sanity";
 import Image from "next/image";
 import { get_data } from "@/components/components_parts/getdata";
 import Product_Description from "@/components/components_parts/Product_Description";
-import { urlForImage } from "../../../sanity/lib/image";
+import { urlForImage } from "../../../../sanity/lib/image";
 import Wrapper from "@/components/Wrapper";
 import { Data_Type } from "@/types";
 

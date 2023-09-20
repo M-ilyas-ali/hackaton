@@ -18,13 +18,13 @@ export default function Navbar() {
             </Link>
             <ul className="flex w-[30%] justify-between">
               <li className="hover:scale-125 duration-300 hover:text-slate-800 ">
-                <Link href="#">Female</Link>
+                <Link href="/female">Female</Link>
               </li>
               <li className="hover:scale-125 duration-300 hover:text-slate-800 ">
-                <Link href="#">Male</Link>
+                <Link href="/male">Male</Link>
               </li>
               <li className="hover:scale-125 duration-300 hover:text-slate-800 ">
-                <Link href="#">Children</Link>
+                <Link href="/children">Children</Link>
               </li>
               <li className="hover:scale-125 duration-300 hover:text-slate-800 ">
                 <Link href="/allproducts">All-Products</Link>
