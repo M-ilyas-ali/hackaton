@@ -6,7 +6,6 @@ export const get_data = async () => {
       price,
       title,
       image,
-      title,
         name,
         slug,
         description,

@@ -7,6 +7,7 @@ import Swiper_Slider from "@/components/Swiper_Slider";
 export default function Home() {
   return (
     <>
+    
       <Hero />
       <Promotions />
       <Swiper_Slider />
