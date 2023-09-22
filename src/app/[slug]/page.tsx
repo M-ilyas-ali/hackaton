@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { urlForImage } from "../../../sanity/lib/image";
 import { Data_Type } from "@/types";
+import { get_data } from "@/components/components_parts/getdata";
 
 type Props = {
   params: {
@@ -13,6 +14,8 @@ type Props = {
 
 const get_Category = async ({ params }: Props) => {
   const slug_Val = params.slug;
+  //! slug val get the dynamic value of category from navigation bar and pass it to url with the help of link
+  //? if slug value from url is equal to category of sanity  
   const query = `*[_type == "products" && category -> name == "${slug_Val}"] {
     _id,
       price,
@@ -29,6 +32,8 @@ const get_Category = async ({ params }: Props) => {
   const res = await client.fetch(query);
   return res;
 };
+//* this line revalidate this page every 60 seconds and which make it ISR page 
+export const revalidate= 60;
 
 const Categories = async ({ params }: Props) => {
   const products: Data_Type[] = await get_Category({ params });
@@ -71,21 +76,13 @@ const Categories = async ({ params }: Props) => {
 
 export default Categories;
 
-// type ICategory = {
-//   slug: {
-//     current: string;
-//   };
-// };
-
-// export async function generateStaticParams() {
-//   const query = `*[_type == "category"] {
-//       slug {
-//       current
-//       },
-//   }`;
-//   const res: ICategory[] = await client.fetch(query);
-
-//   return res.map((category) => ({
-//     slug: category.slug.current,
-//   }));
-// }
+//todo this function will make static pages 
+export async function generateStaticParams() {
+  const data: Promise<Data_Type[]> = get_data();
+  const allproducts_data= await data
+  return allproducts_data.map((items) => ({
+    //? i want to replace [product] name with which ever is the slug name cause we are 
+    //? make pages on the bases of slug 
+    slug: items.category.name
+  }));
+}

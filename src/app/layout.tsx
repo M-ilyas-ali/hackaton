@@ -4,6 +4,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Footer from '@/components/Footer'
 import Providers from '@/lib/Redux_Provider/Providers'
+import Redux_Provider from '@/components/utils/Redux_Provider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,6 +19,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
+    <Redux_Provider>
     <Providers>
     <html lang="en">
       <body className={inter.className}>
@@ -27,5 +29,6 @@ export default function RootLayout({
         </body>
     </html>
     </Providers>
+    </Redux_Provider>
   )
 }

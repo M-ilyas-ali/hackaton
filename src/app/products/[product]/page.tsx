@@ -84,6 +84,13 @@ export default async function Product({ params }: Props) {
     </>
   );
 }
-// function product_data(arg0: { params: { product: string; }; }): Promise<Data_Type[]> {
-//     throw new Error("Function not implemented.");
-// }
+//todo this function will make static pages 
+export async function generateStaticParams() {
+  const data: Promise<Data_Type[]> = get_data();
+  const allproducts_data= await data
+  return allproducts_data.map((items) => ({
+    //? i want to replace [product] name with which ever is the slug name cause we are 
+    //? make pages on the bases of slug 
+    product:items.slug.current
+  }));
+}
