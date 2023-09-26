@@ -6,6 +6,7 @@ import Product_Description from "@/components/components_parts/Product_Descripti
 import { urlForImage } from "../../../../sanity/lib/image";
 import Wrapper from "@/components/Wrapper";
 import { Data_Type } from "@/types";
+import ProductCard from "@/components/ProductCard";
 
 type Props = {
   params: {
@@ -72,13 +73,14 @@ export default async function Product({ params }: Props) {
                 XL
               </li>
             </ul>
-            {/* <Counts/> */}
+            <p className="font-bold ">QUANTITY</p>
+            <ProductCard/>
             <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
               {`$-${Data_of_Product.price}`}
             </h3>
           </div>
         </div>
-
+     
         <Product_Description />
       </Wrapper>
     </>
