@@ -63,9 +63,10 @@ export default function ProductCart(props:Props) {
     if(Existing){
       const new_Quantity=Existing.quantity+CounterValue;
       const new_total_price=props.Product.price* new_Quantity;
-      const res= await fetch("/api/cart",{
+      const res= await fetch(`/api/cart`,{
         method:"PUT",
         body:JSON.stringify({
+          user_id:props.userID,
           product_id:props.Product._id,
           quantity:new_Quantity,
           total_price:new_total_price
@@ -75,8 +76,9 @@ export default function ProductCart(props:Props) {
         throw new Error("fail to update data");
       }
     }else{
-      await SendData();
-    }
+        await SendData();
+      }
+      setIsLoading(false)
   
    }
   return (

@@ -38,6 +38,7 @@ export async function POST(request: NextRequest) {
   }
 }
 export const PUT = async (request: NextRequest) => {
+ 
   const req: New_Cart = await request.json();
 
   try {
