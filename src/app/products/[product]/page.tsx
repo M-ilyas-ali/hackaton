@@ -74,10 +74,9 @@ export default async function Product({ params }: Props) {
               </li>
             </ul>
             <p className="font-bold ">QUANTITY</p>
-            <ProductCard/>
-            <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
-              {`$-${Data_of_Product.price}`}
-            </h3>
+            <ProductCard Product={Data_of_Product}userID={"2345"}/>
+            
+            
           </div>
         </div>
      
